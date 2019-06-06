@@ -1,0 +1,92 @@
+@media screen
+and (max-width: 1400px) {
+  :root {
+    font-size: 12px;
+  }  
+}
+
+.signup-layout {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 6fr 4fr;
+  grid-template-rows: 10vh 1fr 30vh;
+  --input-height: 5rem;
+}
+
+.signup-layout__hero {
+  grid-area: 2/1/3/2;
+  width: 100%;
+  height: 100%;
+}
+
+.signup-layout__hero > * {
+  background-color: #e4e4e4;
+}
+
+.signup-layout__hero__title {
+  width: 44rem;
+  height: 14rem;
+  margin: 20px 4rem;
+}
+
+.signup-layout__hero__desc {
+  max-width: 35rem;
+  height: 8rem;
+  margin: 0 4rem;
+}
+
+.signup-layout__form {
+  display: grid;
+  grid-area: 1/2/4/3;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  grid-template-rows:
+  4fr 
+  [input-start] var(--input-height) 20px var(--input-height) [input-end]
+  20px
+  2rem
+  4rem
+  30px
+  2rem
+  4fr;
+  grid-template-columns: 1fr 28rem 1fr
+}
+
+.signup-layout__form > * {
+  background-color: #e4e4e4;
+}
+
+.signup-layout__form__input {
+  width: 28rem;
+  height: var(--input-height);
+  grid-column: 2/3;
+}
+
+.signup-layout__form__input--email {
+  grid-row: input-start/span 1;
+}
+
+.signup-layout__form__input--password {
+  grid-row: span 1/input-end;
+}
+
+.signup-layout__form__forgot-password {
+  width: 12rem;
+  height: 2rem;
+  grid-area: 6/2/span 1/span 1;
+  justify-self: start;
+}
+
+.signup-layout__form__btn-signin {
+  width: 10rem;
+  grid-area: 7/2/span 1/span 1;
+  justify-self: end;
+}
+
+.signup-layout__form__link-signup {
+  width: 14rem;
+  grid-area: 9/2;
+  justify-self: end;
+}
