@@ -1,0 +1,55 @@
+@media screen
+and (max-width: 1400px) {
+  :root {
+    font-size: 12px;
+  }  
+}
+
+
+.welcome-layout {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 60vw 1fr 28rem 1fr;
+  grid-template-rows:
+  10vh 
+  20px
+  [title-start] 14rem [title-end]
+  20px
+  [desc-start] 8rem [desc-end]
+  2fr
+  [btn-start] 4rem [btn-end]
+  20px
+  [link-start] 2rem [link-end]
+  1fr;
+}
+
+.welcome-layout > * {
+  background-color: #e4e4e4;
+}
+
+.welcome-layout__hero__title {
+  width: 44rem;
+  height: 14rem;
+  margin: 0 4rem;
+  grid-area: title-start/1;  
+}
+
+.welcome-layout__hero__desc {
+  width: 35rem;
+  height: 8rem;
+  margin: 0 4rem;
+  grid-area: desc-start/1;  
+}
+
+.welcome-layout__btn-skip {
+  width: 10rem;
+  grid-area: btn-start/3;
+  justify-self: end;
+}
+
+.welcome-layout__link-tutorial {
+  width: 14rem;
+  grid-area: link-start/3;
+  justify-self: end;
+}

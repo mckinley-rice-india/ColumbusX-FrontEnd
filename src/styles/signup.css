@@ -5,6 +5,7 @@ and (max-width: 1400px) {
   }  
 }
 
+.signin-layout,
 .signup-layout {
   display: grid;
   width: 100vw;
@@ -14,79 +15,128 @@ and (max-width: 1400px) {
   --input-height: 5rem;
 }
 
+.signin-layout__hero,
 .signup-layout__hero {
   grid-area: 2/1/3/2;
   width: 100%;
   height: 100%;
 }
 
+.signin-layout__hero > *,
 .signup-layout__hero > * {
   background-color: #e4e4e4;
 }
 
+.signin-layout__hero__title,
 .signup-layout__hero__title {
   width: 44rem;
   height: 14rem;
   margin: 20px 4rem;
 }
 
+.signin-layout__hero__desc,
 .signup-layout__hero__desc {
   max-width: 35rem;
   height: 8rem;
   margin: 0 4rem;
 }
 
+/* Common Styles */
+.signin-layout__form,
 .signup-layout__form {
   display: grid;
   grid-area: 1/2/4/3;
   width: 100%;
   height: 100%;
   justify-items: center;
-  grid-template-rows:
-  4fr 
-  [input-start] var(--input-height) 20px var(--input-height) [input-end]
-  20px
-  2rem
-  4rem
-  30px
-  2rem
-  4fr;
-  grid-template-columns: 1fr 28rem 1fr
+  grid-template-columns: 1fr 28rem 1fr;
 }
 
+.signin-layout__form > *,
 .signup-layout__form > * {
   background-color: #e4e4e4;
 }
 
+.signin-layout__form__input,
 .signup-layout__form__input {
   width: 28rem;
   height: var(--input-height);
   grid-column: 2/3;
 }
 
+.signin-layout__form__input--email,
 .signup-layout__form__input--email {
-  grid-row: input-start/span 1;
+  grid-row: input1-start/span 1;
 }
 
+.signin-layout__form__input--password,
 .signup-layout__form__input--password {
-  grid-row: span 1/input-end;
+  grid-row: input2-start /span 1;
 }
 
-.signup-layout__form__forgot-password {
+/* SignIn Styles */
+.signin-layout__form {
+  grid-template-rows:
+  1fr 
+  [input1-start] var(--input-height) [input1-end]
+  20px 
+  [input2-start] var(--input-height) [input2-end]
+  20px
+  2rem
+  4rem
+  30px
+  2rem
+  1fr;
+}
+
+
+.signin-layout__form__forgot-password {
   width: 12rem;
   height: 2rem;
-  grid-area: 6/2/span 1/span 1;
+  grid-area: -6/2/span 1/span 1;
   justify-self: start;
 }
 
-.signup-layout__form__btn-signin {
+.signin-layout__form__btn-signin {
   width: 10rem;
-  grid-area: 7/2/span 1/span 1;
+  grid-area: -5/2/span 1/span 1;
   justify-self: end;
 }
 
-.signup-layout__form__link-signup {
+.signin-layout__form__link-signup {
   width: 14rem;
-  grid-area: 9/2;
+  grid-area: -3/2/span 1/span 1;
+  justify-self: end;
+}
+
+/* SignUp Styles */
+.signup-layout__form {
+  grid-template-rows:
+  1fr 
+  [input1-start] var(--input-height) [input1-end]
+  20px 
+  [input2-start] var(--input-height) [input2-end]
+  20px
+  [input3-start] var(--input-height) [input3-end]
+  20px
+  4rem
+  30px
+  2rem
+  1fr;
+}
+
+.signup-layout__form__input--password-repeat {
+  grid-row: input3-start/ span 1;
+}
+
+.signup-layout__form__btn-signup {
+  width: 10rem;
+  grid-area: -5/2;
+  justify-self: end;
+}
+
+.signup-layout__form__link-login {
+  width: 14rem;
+  grid-area: -3/2/span 1/span 1;
   justify-self: end;
 }

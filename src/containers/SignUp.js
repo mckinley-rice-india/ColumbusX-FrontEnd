@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/signup.css';
 
-export default class SignUp extends Component {
+export default class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -17,9 +17,9 @@ export default class SignUp extends Component {
         <div className="signup-layout__form">
           <div className="signup-layout__form__input signup-layout__form__input--email">Email</div>
           <div className="signup-layout__form__input signup-layout__form__input--password">Password</div>
-          <div className="signup-layout__form__forgot-password">Forgot Password</div>
-          <div className="signup-layout__form__btn-signin">Sign In Button</div>
-          <div className="signup-layout__form__link-signup">Sign Up Link</div>
+          <div className="signup-layout__form__input signup-layout__form__input--password-repeat">Repeat Password</div>
+          <div className="signup-layout__form__btn-signup">Sign Up Button</div>
+          <div className="signup-layout__form__link-login">Login Link</div>
         </div>
       </div>
     );
