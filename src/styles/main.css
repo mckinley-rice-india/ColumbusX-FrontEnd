@@ -1,0 +1,27 @@
+.home-layout {
+  margin-top: 6rem;
+}
+
+.legal-layout,
+.profile-layout {
+  display: grid;
+  margin-top: 6rem;
+  padding-top: 10px;
+  grid-template-columns: 1fr 3fr;
+}
+
+.sidebar {
+  display: grid;
+  position: fixed;
+  height: 40rem;
+  width: 25vw;
+  background-color: #cccccc;
+  left: 0;
+}
+
+.content {
+  background-color: #e4e4e4;
+  margin: 2rem 20px;
+  grid-column: 2;
+  height: 100rem;
+}
