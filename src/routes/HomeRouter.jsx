@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import Home from '../containers/Home';
 import LegalRouter from './LegalRouter';
-import ProfileRouter from './ProfileRouter';
+import SettingsRouter from './SettingsRouter';
 import Navbar from '../components/Navbar';
 
 
@@ -24,7 +24,7 @@ export default class HomeRouter extends Component {
         <Switch>
           <Route exact path={`${match.url}/`} component={Home} />
           <Route path={`${match.url}/legal`} component={LegalRouter} />
-          <Route path={`${match.url}/profile`} component={ProfileRouter} />
+          <Route path={`${match.url}/settings`} component={SettingsRouter} />
         </Switch>
       </React.Fragment>
     );
