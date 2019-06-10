@@ -1,0 +1,13 @@
+.sidebar {
+  display: grid;
+  position: fixed;
+  left: 10rem;
+  height: 40rem;
+  width: 15rem;
+  grid-auto-rows: 3rem;
+  padding-top: 1rem;
+}
+
+.sidebar__menuitem {
+  font-size: 1rem;
+}
