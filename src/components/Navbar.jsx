@@ -7,7 +7,7 @@ class Navbar extends Component {
     super(props);
     this.state = {
       menuItems: new Array(4).fill('').map((_, index) => ({
-        name: `Item${index + 1}`,
+        name: `Item ${index + 1}`,
         key: index,
       })),
     };
