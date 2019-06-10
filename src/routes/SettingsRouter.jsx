@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Sidebar from '../components/Sidebar';
-import ProfileSettings from '../pages/ProfileSettings';
+import AccountSettings from '../pages/AccountSettings';
 
 export default class ProfileRouter extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ export default class ProfileRouter extends Component {
       <div className="profile-layout">
         <Sidebar />
         <Switch>
-          <Route path={`${match.url}/profile`} component={ProfileSettings} />
+          <Route path={`${match.url}/profile`} component={AccountSettings} />
         </Switch>
       </div>
     );
