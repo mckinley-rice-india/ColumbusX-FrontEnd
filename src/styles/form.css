@@ -1,0 +1,123 @@
+.form-card,
+.content {
+  background-color: #f4f4f4;
+  margin: 2rem 20px;
+  grid-column: 2;
+  width: 60%;
+  padding: 2rem 4rem 2rem 2rem;
+}
+
+.form-card__seperator {
+  border: none;
+  height: 1px;
+  background-color: #cccccc;
+  color: #cccccc;
+}
+
+.form-section {
+  margin: 1rem 0;
+}
+
+.form-section__header {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.form-subsection {
+  margin: 1rem 0;
+}
+
+.form-subsection__subheader,
+.form-row--select__title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #a6a6a6;
+  margin: 20px 0;
+}
+
+.form-flat-action {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.form-row {
+  display: grid;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.form-row--removable,
+.form-row--password {
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-row--select {
+  height: 5rem;
+}
+
+.form-row--editable {
+  grid-template-columns: 1fr 5fr 2fr;
+}
+
+.form-row--filter {
+  grid-template: 5rem 1fr / 1fr 5fr 1fr;
+}
+
+.form-row__title {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #a6a6a6;
+}
+
+.form-row__value,
+.form-row__description {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.form-row__value {
+  justify-self: start;
+}
+
+.form-row__description {
+  justify-self: center;
+  color: #a6a6a6;
+}
+
+.form-row__btn-action {
+  justify-self: end;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 5px 15px;
+  background-color: #333333;
+  color: #eeeeee;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.form-row__input--filter {
+  width: 90%;
+  height: 2rem;
+  justify-self: start;
+  background-color: transparent;
+  border: 1px solid #333333;
+}
+
+.form-row__input--password {
+  width: 12rem;
+  border: none;
+  background: transparent;
+  color: #777777;
+}
+
+.form-row--select__menu {
+  border: none;
+  width: 10rem;
+  background-color: #cccccc;
+}
+
+.form-row__tags {
+  grid-area: 2/2/3/3;
+}
