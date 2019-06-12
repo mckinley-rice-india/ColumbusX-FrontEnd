@@ -19,7 +19,7 @@ export default class ProfileRouter extends Component {
       <div className="profile-layout">
         <Sidebar />
         <Switch>
-          <Route path={`${match.url}/profile`} component={AccountSettings} />
+          <Route path={`${match.url}/account`} component={AccountSettings} />
         </Switch>
       </div>
     );
