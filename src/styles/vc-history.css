@@ -1,0 +1,44 @@
+.vc-history {
+  margin: 10rem 8rem;
+}
+
+.vc-history__options-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 12rem);
+  justify-self: start;
+}
+
+.vc-history__options-bar__select {
+  background-color: #cccccc;
+  width: 90%;
+  height: 1.5rem;
+}
+
+.vc-history__card {
+  margin: 2rem 0;
+  padding: 20px 2rem;
+  background-color: #e4e4e4;
+}
+
+.vc-history__card__timestamp {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.vc-history__card__vc-table {
+  display: grid;
+  grid-auto-rows: 14rem;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.vc-history__card__vc-table__vc-row {
+  display: grid;
+  grid-template: 14rem / 22rem 22rem 1fr;
+  gap: 20px;
+  justify-items: center;
+}
+
+.vc-history__card__vc-table__vc-row > * {
+  background-color: #cccccc;
+  width: 100%;
+}
