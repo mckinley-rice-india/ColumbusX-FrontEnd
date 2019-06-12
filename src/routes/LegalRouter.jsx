@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import Sidebar from '../components/Sidebar';
+import Policies from '../containers/Policies';
+
 
 export default class Legal extends Component {
   constructor(props) {
@@ -8,11 +13,20 @@ export default class Legal extends Component {
   }
 
   render() {
+    const { match } = this.props;
     return (
       <div className="legal-layout">
         <Sidebar />
-        <div className="content">Content</div>
+        <Switch>
+          <Route path={`${match.url}/policies`} component={Policies} />
+        </Switch>
       </div>
     );
   }
 }
+
+Legal.propTypes = {
+  match: PropTypes.shape({
+    url: PropTypes.string,
+  }).isRequired,
+};
